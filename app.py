@@ -4,7 +4,7 @@ import requests
 
 app = Flask(__name__)
 
-@app.route('/weather')
+@app.route('/')
 def weather():
     return render_template('weather_form.html')
 

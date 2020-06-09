@@ -1,1 +1,39 @@
-Its {{ temp }}° in {{ city }}
+{% extends 'base.html' %}
+{% include 'partials/navbar.html' %}
+{% block content %}
+<style>
+
+    body {
+font-family: "Roboto", sans-serif;
+background-color: #457b9d !important;
+
+    }
+    #container {
+     background-color: #a8dadc;
+    justify-content: center;
+    align-items: center;
+    padding-left: 500px;
+    }
+
+    
+
+    h1 {
+        font-size: 20px;
+        padding-left: -150px;
+        padding-top: 20px;
+    }
+
+    div.image {
+        content:url(https://i.ya-webdesign.com/images/black-line-png-5.png);
+        position: relative;
+        transform: translate(-15px, 30px);
+    }
+    </style>
+
+
+
+<div id="container">
+<h1>Its {{ temp }}° in {{ city }}</h1>
+<div class='image'></div>
+</div>
+{% endblock %}

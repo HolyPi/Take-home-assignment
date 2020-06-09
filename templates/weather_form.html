@@ -1,5 +1,48 @@
+{% extends 'base.html' %}
+{% include 'partials/navbar.html' %}
+{% block content %}
+
+<style>
+
+    body {
+font-family: "Roboto", sans-serif;
+background-color: #457b9d !important;
+
+    }
+    #container {
+     background-color: #a8dadc;
+    justify-content: center;
+    align-items: center;
+    padding-left: 500px;
+    }
+
+    #button {
+    padding-top: 10px;
+    padding-left: 50px;
+    
+
+    }
+
+    h1 {
+        font-size: 20px;
+        padding-top: 10px;
+    }
+
+    div.image {
+        content:url(https://i.ya-webdesign.com/images/black-line-png-5.png);
+        position: relative;
+        transform: translate(-90px, 30px);
+    }
+</style>
+<div id="container">
 <form action="/weather_results">
-    Type in your city: <br>
+    <h1>Type in your city:</h1>
     <input type="text" name="city"><br>
+    <div id="button">
     <input type="submit" value="Submit!">
+    <div class='image'></div>
+</div>
 </form>
+</div>
+
+{% endblock %}
